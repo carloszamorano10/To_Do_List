@@ -17,11 +17,31 @@ body{
     }
 input{
     width: 90%;
-    height: 20px;
+    height: 32px;
 }
 
 .contInput{
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+
+.contTareas{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.listaTareas{
+    margin-right: 200px;
+    margin-top: 20px;
+}
+
+button{
+   background-color: green;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   padding: 10px;
+   
 }
