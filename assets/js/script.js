@@ -20,5 +20,6 @@ btn.addEventListener("click", () => {
         `;
   }
   dibujarTareas.innerHTML = html;
+  contadorTareas.innerHTML = tareas.length
 });
 console.log(tareas);
