@@ -1,0 +1,27 @@
+
+body{
+    display: flex;
+    justify-content: center;
+}
+.cont{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 50%;
+    height: auto;
+    padding: 5px;
+    }
+
+    hr{
+        width: 95%;
+        color: gray;
+    }
+input{
+    width: 90%;
+    height: 20px;
+}
+
+.contInput{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
