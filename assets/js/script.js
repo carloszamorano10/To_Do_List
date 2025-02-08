@@ -27,7 +27,7 @@ const renderizar = () => {
         <tr>
            <td>${tarea.id}</td>
            <td>${tarea.nombre}</td>
-           <td><input type="checkbox" onclick="realizadas()" id="check"/></td>
+           <td><input type="checkbox" onclick="cambioRealizada(${tarea.id})" ${tarea.realizada ? 'checked' : ''}/></td>
            <td><i class="fa-solid fa-circle-minus eliminar" onclick="borrar(${tarea.id})"></i></td>
         </tr>
         `;
@@ -35,14 +35,17 @@ const renderizar = () => {
 
   dibujarTareas.innerHTML = html;
   contadorTareas.innerHTML = tareas.length;
+  contadorRealizadas.innerHTML = tareas.filter(tarea => tarea.realizada).length;
 };
 
-const realizadas = () => {
-  const realizado = document.getElementById("check");
 
-  if (realizado.checked === true) {
-    tareas.realizada = true;
-  } else if (realizado.checked === false) {
-    tareas.realizada = false;
-  }
+const cambioRealizada = (id) => {
+  const tarea = tareas.find((ele) => ele.id === id);
+  tarea.realizada = !tarea.realizada;
+  renderizar();
 };
+
+
+
+
+
